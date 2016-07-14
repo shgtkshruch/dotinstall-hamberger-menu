@@ -9,12 +9,21 @@ html(lang="ja")
     meta(content='keywords', name='keywords')
     meta(content='width=device-width, initial-scale=1' name='viewport')
     meta(content='telephone=no', name='format-detection')
-    
+
+    link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css')
     link(rel='stylesheet', href='styles/style.css', media='all')
   body
-    h1 Hello Github Pages
-
-    
+    .menu
+      ul
+        - for (var i = 0; i < 5; i++)
+          li MENU#{i+1}
+    .main#js-main
+      i.fa.fa-bars.show#js-show
+      h1 Hello
+      - for (var i = 0; i < 10; i++)
+        p
+          - for (var j = 0; j < 15; j++)
+            | Hello World.&nbsp;
 
     // build:js scripts/main.js
     script(src='scripts/script.js')

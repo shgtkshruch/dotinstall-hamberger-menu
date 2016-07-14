@@ -1,0 +1,41 @@
+$width-menu: 180px;
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: Verdana, sans-serif;
+}
+
+.menu {
+  box-sizing: border-box;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: $width-menu;
+  min-height: 100%;
+  color: #fff;
+  background-color: #4c81e9;
+  padding: 8px;
+}
+
+.main {
+  box-sizing: border-box;
+  z-index: 1;
+  background-color: #eee;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 8px;
+  color: #333;
+  transition: left .4s;
+  &.menu-open {
+    left: $width-menu * -1;
+  }
+}
+
+.show {
+  float: right;
+  cursor: pointer;
+}
